@@ -1,66 +1,43 @@
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.input-box {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-button {
-  padding: 8px 15px;
-  background: #00a1d6;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0087b3;
-}
-
-.message-board {
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 10px;
-  max-height: 500px;
-  overflow-y: auto;
-}
-
-.message {
-  padding: 10px;
-  margin: 8px 0;
-  background: #f5f5f5;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-.gift-icon {
-  font-size: 24px;
-  padding: 0 10px;
-}
-
-.gift-name {
-  color: #ff7f5f;
-  font-weight: bold;
+// frontend/package.json （务必放在frontend文件夹内）
+{
+  "name": "giftlab-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",  // 👈 必须指定Node.js版本
+    "npm": ">=9.0.0"
+  }
 }
