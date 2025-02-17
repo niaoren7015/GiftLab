@@ -1,0 +1,28 @@
+name: Generate Lockfile
+
+on:
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Install Dependencies
+        run: |
+          cd frontend
+          npm install --package-lock-only
+
+      - name: Commit Changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add frontend/package-lock.json
+          git commit -m "chore: Generate lockfile via GitHub Action"
+          git push
