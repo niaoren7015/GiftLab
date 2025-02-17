@@ -1,4 +1,3 @@
-// frontend/package.json （务必放在frontend文件夹内）
 {
   "name": "giftlab-frontend",
   "version": "1.0.0",
